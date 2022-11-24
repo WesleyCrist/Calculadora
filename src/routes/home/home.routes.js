@@ -1,5 +1,4 @@
 import express from 'express'
-
 const home = express()
 
 // Arquivo em constante mudança

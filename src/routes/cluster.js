@@ -1,17 +1,17 @@
 import express from 'express'
-import home from "./home.routes.js";
-import percent from './percent.routes.js';
-import increase from './increase.routes.js';
-import none from './nonexistent.routes.js';
-import decreased from './decreased.routes.js';
+
+import generic from './generic/generic.js'
+import area from './area/area.js'
+import Porcentagem from './porcentagem/porcentagem.js'
+import none from './notFound/nonexistent.routes.js'
+import home from './home/home.routes.js'
 
 const cluster = express()
 
-// Aglomeração de todas as rotas da aplicação
+cluster.use('/generic', generic)
+cluster.use('/area', area)
+cluster.use('/porcentagem', Porcentagem)
 cluster.use('/', home)
-cluster.use('/percent', percent)
-cluster.use('/increase', increase)
-cluster.use('/decreased', decreased)
 cluster.use(none)
 
 export default cluster

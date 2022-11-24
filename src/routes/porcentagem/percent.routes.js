@@ -1,5 +1,5 @@
 import express from 'express'
-import Calculator from '../functions/Calculator.js'
+import Calculator from '../../functions/Calculator.js'
 
 const percent = express()
 

@@ -1,5 +1,4 @@
 import express from 'express'
-
 const none = express()
 
 // Tramento para para digitação inválida de URL

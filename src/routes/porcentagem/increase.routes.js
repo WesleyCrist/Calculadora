@@ -1,12 +1,8 @@
 import express from 'express'
+import Templet from '../../classes/Templet.js'
 
 const increase = express()
 
-increase.get('/', (req, res) => {
-    res.status(501).send({
-        message: 'serviço não implementado',
-        statusCode: 501
-    })
-})
+increase.get('/', Templet.getNotBuild)
 
 export default increase

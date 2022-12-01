@@ -1,12 +1,8 @@
 import express from 'express'
+import Templet from '../../classes/Templet.js'
 
 const intendUp = express()
 
-intendUp.get('/', (req, res) => {
-    res.status(501).send({
-        message: 'serviço não implementado',
-        statusCode: 501
-    })
-})
+intendUp.get('/', Templet.getNotBuild)
 
 export default intendUp

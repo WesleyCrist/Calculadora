@@ -8,8 +8,8 @@ import home from './home/home.routes.js'
 
 const cluster = express()
 
-cluster.use('/generic', generic)
 cluster.use('/area', area)
+cluster.use('/generic', generic)
 cluster.use('/porcentagem', Porcentagem)
 cluster.use('/', home)
 cluster.use(none)

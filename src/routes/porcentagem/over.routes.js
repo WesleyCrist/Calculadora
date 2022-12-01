@@ -1,12 +1,8 @@
 import express from 'express'
+import Templet from '../../classes/Templet.js'
 
 const over = express()
 
-over.get('/', (req, res) => {
-    res.status(501).send({
-        message: 'serviço não implementado',
-        statusCode: 501
-    })
-})
+over.get('/', Templet.getNotBuild)
 
 export default over

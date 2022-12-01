@@ -1,12 +1,8 @@
 import express from 'express'
+import Templet from '../../classes/Templet.js'
 const home = express()
 
 // Arquivo em constante mudança
-home.get('/', (req, res) =>{
-    res.status(200).send({
-        message: 'Rotas da aplicação',
-        percent: 'Porcentagem de um determinado valor'
-    })
-})
+home.get('/', Templet.getHome)
 
 export default home

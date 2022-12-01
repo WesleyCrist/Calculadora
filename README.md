@@ -2,9 +2,15 @@
 
 ## Áreas
 
+    rota - /area
+
 ### Circle
 
+    rota - /area/circle
+
 ## Generic
+
+    rota - /generic
 
 ### Fatorar número
 

@@ -1,9 +1,10 @@
 import Message from "../classes/Message.js"
 
-class Calculator {
+export default class Calculator {
 
     constructor() {}
 
+    // Concluído
     static percent(x, y) {
         // Quanto é 20% de 100 = 20
         const msg = new Message()
@@ -11,6 +12,7 @@ class Calculator {
         return (x * y) / 100
     }
 
+    // Concluído
     static percentage(x, y) {
         // O valor 20 é qual porcentagem de 100 = 20%
         const msg = new Message()
@@ -18,6 +20,7 @@ class Calculator {
         return (x * 100) / y
     }
 
+    // Em desenvolvimento
     static increase(x, y) {
         // Um valor 70 que aumentou para 100, qual foi o aumento percentual? = 30%
         const msg = new Message()
@@ -25,6 +28,7 @@ class Calculator {
         return ((y - x) / y) * 100
     }
 
+    // Em desenvolvimento
     static decreased(x, y) {
         // Um valor de 100 que diminuiupara 70, qual foi a diminuição em percentual?
         const msg = new Message()
@@ -34,6 +38,7 @@ class Calculator {
         // em construção
     }
 
+    // Em desenvolvimento
     static over(x, y) {
         
         /**
@@ -45,6 +50,7 @@ class Calculator {
         // em construção
     }
 
+    // Em desenvolvimento
     static intendUp(x, y) {
         
         const msg = new Message()
@@ -66,6 +72,7 @@ class Calculator {
         // em construção
     }
 
+    // Em desenvolvimento
     static intendDown(x, Y) {
 
         /**
@@ -86,6 +93,7 @@ class Calculator {
         
     }
 
+    // Em desenvolvimento
     static increaseIn(x, y) {
 
         /**
@@ -105,6 +113,7 @@ class Calculator {
         // em construção
     }
 
+    // Em desenvolvimento
     static decreasedIn(x, y) {
 
         /**
@@ -125,5 +134,3 @@ class Calculator {
         
     }
 }
-
-export default Calculator

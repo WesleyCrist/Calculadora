@@ -9,6 +9,7 @@ import intendUp from './intendUp.routes.js'
 import over from './over.routes.js'
 import percent from './percent.routes.js'
 import percentage from './percentage.routes.js'
+import subRoute from './porcentagem.routes.js'
 
 const Porcentagem = express()
 
@@ -21,5 +22,6 @@ Porcentagem.use('/intendup', intendUp)
 Porcentagem.use('intenddown', intendDown)
 Porcentagem.use('increasein', increasedIn)
 Porcentagem.use('decreasein', decreasedIn)
+Porcentagem.use('/', subRoute)
 
 export default Porcentagem

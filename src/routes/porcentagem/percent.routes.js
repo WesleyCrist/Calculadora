@@ -1,13 +1,14 @@
 import express from 'express'
 import Calculator from '../../functions/Calculator.js'
+import Message from '../../classes/Message.js'
 
 const percent = express()
+const msg = new Message()
 
 percent.get('/:x?/:y?', (req, res) => {
-
     if(!req.params.x && !req.params.y) {
         res.status(400).send({
-            message: 'Ambos os parâmetro precisam ser preenchidos',
+            message: msg.notFilled,
             status: 'ainda a modificar'
         })
     } else{
@@ -15,7 +16,7 @@ percent.get('/:x?/:y?', (req, res) => {
         const valY = Number(req.params.y)
         if(isNaN(valX) || isNaN(valY)) {
             res.status(400).send({
-                message: 'Nenhum parâmetro deve estar fazio ou receber strings, ambos recebem number',
+                message: msg.incomplete,
                 codeStatus: 400
             })
         } else {
@@ -30,7 +31,7 @@ percent.get('/:x?/:y?', (req, res) => {
                 })
             } catch(e) {
                 res.status(500).send({
-                    message: 'Falha na execução',
+                    message: msg.fail,
                     error: e.message
                 })
             }

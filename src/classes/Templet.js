@@ -1,11 +1,12 @@
 import Message from './Message.js'
+const msg = new Message()
 
 export default class Templet {
     constructor() {}
 
     static getNotFound(req, res, next) {
         res.status(404).send({
-            message: 'confira se a url está escrita de forma correta',
+            message: msg.notFound,
             error: 'Page not found',
             statusCode: 404
         })
@@ -13,7 +14,7 @@ export default class Templet {
 
     static getNotBuild(req, res) {
         res.status(501).send({
-            message: 'serviço não implementado',
+            message: msg.notBuild,
             statusCode: 501
         })
     }

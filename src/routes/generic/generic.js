@@ -3,6 +3,7 @@ import rule from './ruleOfThree.routes.js'
 
 const generic = express()
 
-generic.use('/proportion', rule) // Regra de três
+// Regra de três
+generic.use('/proportion', rule) 
 
 export default generic

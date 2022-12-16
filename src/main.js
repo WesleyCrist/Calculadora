@@ -1,11 +1,11 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import cluster from './routes/cluster.js'
 
 const main = express()
-const port = 8081
-
+dotenv.config()
 main.use(cluster)
+// Prática de segurança recomendada pelo express
+main.disable('x-powerred-by')
 
-main.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`)
-})
+main.listen(process.env.PORT, () => console.log(`http://localhost:${process.env.PORT}`))

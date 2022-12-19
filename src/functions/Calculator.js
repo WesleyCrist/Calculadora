@@ -41,7 +41,7 @@ export default class Calculator {
 
     // concluído
     static over(x, y) {
-        // O valor de 8 sobre o valor de 8 é quantos em por cento
+        // O valor de 8 sobre o valor de 8 é quantos em por cento?
         const msg = new Message()
         if(typeof(x) !== 'number' || typeof(y) !== 'number') throw new InvalidType(msg.notNumber)
         return x * y

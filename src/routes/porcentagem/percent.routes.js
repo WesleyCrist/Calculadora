@@ -11,7 +11,7 @@ percent.get('/:x?/:y?', (req, res) => {
             message: msg.notFilled,
             status: 'ainda a modificar'
         })
-    } else{
+    } else {
         const valX = Number(req.params.x)
         const valY = Number(req.params.y)
         if(isNaN(valX) || isNaN(valY)) {

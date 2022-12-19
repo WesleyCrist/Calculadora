@@ -3,6 +3,6 @@ import Templet from '../../classes/Templet.js'
 
 const decreased = express()
 
-decreased.get('/', Templet.getNotBuild)
+decreased.get('/', Templet.getNotFound)
 
 export default decreased

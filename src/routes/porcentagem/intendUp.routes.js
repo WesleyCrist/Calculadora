@@ -3,6 +3,6 @@ import Templet from '../../classes/Templet.js'
 
 const intendUp = express()
 
-intendUp.get('/', Templet.getNotBuild)
+intendUp.get('/', Templet.getNotFound)
 
 export default intendUp

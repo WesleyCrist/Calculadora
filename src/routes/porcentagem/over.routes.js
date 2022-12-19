@@ -3,6 +3,6 @@ import Templet from '../../classes/Templet.js'
 
 const over = express()
 
-over.get('/', Templet.getNotBuild)
+over.get('/', Templet.getNotFound)
 
 export default over

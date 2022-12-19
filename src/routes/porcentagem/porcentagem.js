@@ -22,6 +22,7 @@ Porcentagem.use('/intendup', intendUp)
 Porcentagem.use('intenddown', intendDown)
 Porcentagem.use('increasein', increasedIn)
 Porcentagem.use('decreasein', decreasedIn)
+
 Porcentagem.use('/', subRoute)
 
 export default Porcentagem

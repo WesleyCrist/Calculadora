@@ -4,78 +4,71 @@
 
     rota - /area
 
-### Circle
-
-    rota - /area/circle
+    <!-- Em densenvolvimento -->
 
 ## Generic
 
     rota - /generic
 
-### Fatorar número
-
-### Regra de três simples
+    <!-- Em densenvolvimento -->
 
 ## Porcentagem
 
 ### Percent
 
-    Quanto é X de Y
-
-    Ex: Quanto é 25% de 200
-    Res: 50
-
-    /**
-    * 
-    *  Quanto é X de Y
-    *  X é em porcentagem
-    *  A resposta é number
-    * 
-    *  Ex: Quanto é 20% de 100
-    *  res: 80
-    * 
-    */
+    Quanto é 25% de 200
+    /porcentagem/percent/20/100
 
 ### percentage
 
-    O valor X é qual porcentagem de Y
-
-    Ex: O valor 50 é qual porcentagem de 200
-    Res: 25%
-
-    /**
-    * 
-    *  O valor X é qual porcentagem de Y
-    *  X e Y são number
-    *  A resposta é em porcentagem
-    * 
-    *  ex: O valor 40 é qual porcentagem de 200?
-    *  res: 20%
-    * 
-    */
+    O valor 20 é qual porcentagem de 100?
+    /porcentagem/percentage/20/100
 
 ### increase
 
-    /**
-    * 
-    *  Um valor de X que aumentou para Y, qual foi o aumento percentual?
-    *  X e Y são number
-    *  A resposta é em porcentagem
-    * 
-    *  ex: Um valor de 100 que aumentou para 130, qual foi o aumento percentual?
-    *  res: 30%
-    * 
-    */
+    Um valor 70 que aumentou para 100, qual foi o aumento percentual?
+    /porcentagem/increase/70/100
+
+    <!-- Serviço ainda não implementadado -->
 
 ### decreased 
 
-    /**
-    * 
-    *  Um valor de X que diminuiu para Y, qual foi a diminuição percentual?
-    *  X e Y são number
-    *  A resposta é em porcentagem
-    * 
-    *  ex: Um valor de 100 que diminuiu para 70, qual foi a diminuição percentual?
-    *  res: 30%
-    * 
-    */
+    Um valor de 100 que diminuiupara 70, qual foi a diminuição em percentual?
+    /porcentagem/decreased/100/70
+
+    <!-- Serviço ainda não implementadado -->
+
+### over
+
+    O valor de 8 sobre o valor de 8 é quantos em por cento?
+    /porcentagem/over/8/8
+
+    <!-- Serviço ainda não implementadado -->
+
+### intendUp
+
+    Tenho um valor de 100 e quero aumentar 20%, qual é o resultado?
+    /porcentagem/intendup/100/20
+
+    <!-- Serviço ainda não implementadado -->
+
+### intendDown
+
+    Tenho um valor de 100 e quero diminuir 20%, qual é o resultado?
+    /porcentagem/intenddown/100/20
+
+    <!-- Serviço ainda não implementadado -->
+
+### increaseIn
+
+    Tenho um valor inicial que aumentou em 20% e passou para 120, qual é o valor inicial?
+    /porcentagem/increasein/20/120
+
+    <!-- Serviço ainda não implementadado -->
+
+### decreasein
+
+    Tenho um valor inicial que aumentou em 20% e passou para 80, qual é o valor inicial?
+    /porcentagem/decreasein/20/80
+
+    <!-- Serviço ainda não implementadado -->

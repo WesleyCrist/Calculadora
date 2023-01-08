@@ -50,11 +50,11 @@ subRoute.get('/', (req, res) => {
             },
             decreasedIn: {
                 route: '/porcentagem/decreasein',
-                using: 'Tenho um valor inicial que aumentou em 20% e passou para 80, qual é o valor inicial?',
+                using: 'Tenho um valor inicial que diminuiu em 20% e passou para 80, qual é o valor inicial?',
                 example: '/porcentagem/decreasein/20/80'
             }
         }
     })
 })
 
- export default subRoute
+export default subRoute

@@ -1,41 +1,21 @@
 import express from 'express'
-import Calculator from '../../functions/Calculator.js'
+import Validation from '../../classes/Validation.js'
 import Message from '../../classes/Message.js'
 
 const percentage = express()
 const msg = new Message()
 
+// percentage é index 1
 percentage.get('/:x?/:y?', (req, res) => {
-    if(!req.params.x && !req.params.y) {
-        res.status(400).send({
-            message: msg.notFilled,
-            status: 'ainda a modificar'
+    try {
+        const validate = new Validation(req.params.x, req.params.y, 1)
+        const response = validate.run()
+        res.status(response.status).send(response)
+    } catch(e) {
+        res.status(500).send({
+            message: msg.fail,
+            error: e.message 
         })
-    } else {
-        const valX = Number(req.params.x)
-        const valY = Number(req.params.y)
-        if(isNaN(valX) || isNaN(valY)) {
-            res.status(400).send({
-                message: msg.incomplete,
-                codeStatus: 400
-            })
-        } else {
-            try {
-                const result = Calculator.percentage(valX, valY)
-                res.status(200).send({
-                    message: `O valor ${valX} é ${result}% de ${valY} é `,
-                    X: valX,
-                    Y: valY,
-                    Resultado: result,
-                    status: 200
-                })
-            } catch(e) {
-                res.status(500).send({
-                    message: msg.fail,
-                    error: e.message
-                })
-            }
-        }
     }
 })
 

@@ -1,9 +1,8 @@
-import InvalidSequence from "../classes/InvalidSequence.js"
 import Message from "../classes/Message.js"
 
 export default class Calculator {
 
-    constructor() {}
+    // constructor() {}
 
     // Concluído
     static percent(x, y) {
@@ -24,6 +23,7 @@ export default class Calculator {
     // concluído
     static increase(x, y) {
         // Um valor 70 que aumentou para 100, qual foi o aumento percentual? = 30%
+        // reduzir quantidade de números após a vírgula
         const msg = new Message()
         if(typeof(x) !== 'number' || typeof(y) !== 'number') throw new InvalidType(msg.notNumber)
         if(y < x) throw new InvalidSequence(msg.invalidSequence)
@@ -60,6 +60,10 @@ export default class Calculator {
         // Tenho um valor de 100 e quero diminuir 20%, qual é o resultado?
         const msg = new Message()
         if(typeof(x) !== 'number' || typeof(y) !== 'number') throw new InvalidType(msg.notNumber)
+
+        // erro caso número seja menor que zero
+        // if(y < 0) throw 
+
         return x - ((y * x) / 100)
     }
 

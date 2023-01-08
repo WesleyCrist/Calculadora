@@ -19,9 +19,9 @@ Porcentagem.use('/increase', increase)
 Porcentagem.use('/decreased', decreased)
 Porcentagem.use('/over', over)
 Porcentagem.use('/intendup', intendUp)
-Porcentagem.use('intenddown', intendDown)
-Porcentagem.use('increasein', increasedIn)
-Porcentagem.use('decreasein', decreasedIn)
+Porcentagem.use('/intenddown', intendDown)
+Porcentagem.use('/increasein', increasedIn)
+Porcentagem.use('/decreasein', decreasedIn)
 
 Porcentagem.use('/', subRoute)
 

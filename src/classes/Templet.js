@@ -29,6 +29,10 @@ export default class Templet {
         })
     }
 
+    // static getFail(req, res) {
+
+    // }
+
     static test(x, y) {
         if(!x && !y) {
             // code para não recebimento dos valores X e Y
